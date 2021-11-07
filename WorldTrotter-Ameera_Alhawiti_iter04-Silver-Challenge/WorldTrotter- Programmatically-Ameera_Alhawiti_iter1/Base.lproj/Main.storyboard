@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8ub-Pb-Qh5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="kKL-kJ-Bbo">
+            <objects>
+                <viewController id="st3-a7-5xc" customClass="MapViewController" customModule="WorldTrotter__Programmatically_Ameera_Alhawiti_iter1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CPC-Kx-Ici" customClass="MKMapView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0CB-fC-FSC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="Xp8-lR-cXX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K0j-hT-idb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="161"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cer-yz-FXD">
+            <objects>
+                <tabBarController id="8ub-Pb-Qh5" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="La7-dX-ngX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="L8R-7o-e8h" kind="relationship" relationship="viewControllers" id="hS6-RX-7Uf"/>
+                        <segue destination="st3-a7-5xc" kind="relationship" relationship="viewControllers" id="fiJ-V0-OqH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxo-A3-xK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="m2h-3V-Yfm">
+                    <connections>
+                        <outlet property="delegate" destination="8ub-Pb-Qh5" id="AsO-E2-Y1t"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-345" y="-571"/>
+        </scene>
+        <!--convert-->
+        <scene sceneID="eF7-RH-QoA">
+            <objects>
+                <viewController title="convert" id="L8R-7o-e8h" customClass="ConversionViewController" customModule="WorldTrotter__Programmatically_Ameera_Alhawiti_iter1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="htY-sn-Frs" userLabel="Root_View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOB-gW-zRd">
+                                <rect key="frame" x="55.5" y="145.5" width="303" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vG-Eu-Qeb">
+                                <rect key="frame" x="84.5" y="343.5" width="245.5" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="is really" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzq-22-GFd">
+                                <rect key="frame" x="150" y="198.5" width="114" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="value" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kfm-jh-IZm">
+                                <rect key="frame" x="129" y="52" width="156" height="85.5"/>
+                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fahrenheitFieldEditingChanged:" destination="L8R-7o-e8h" eventType="editingChanged" id="VEH-mF-2wH"/>
+                                    <outlet property="delegate" destination="L8R-7o-e8h" id="CsH-bI-FdO"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDP-cd-aIk">
+                                <rect key="frame" x="149" y="251.5" width="116.5" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Czr-aM-4rd"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hzq-22-GFd" firstAttribute="top" secondItem="zOB-gW-zRd" secondAttribute="bottom" constant="10" id="Ir2-j1-E7P"/>
+                            <constraint firstItem="1vG-Eu-Qeb" firstAttribute="centerX" secondItem="Kfm-jh-IZm" secondAttribute="centerX" id="JjQ-2K-PQM"/>
+                            <constraint firstItem="1vG-Eu-Qeb" firstAttribute="top" secondItem="HDP-cd-aIk" secondAttribute="bottom" constant="8" id="LeM-PS-WHr"/>
+                            <constraint firstItem="zOB-gW-zRd" firstAttribute="top" secondItem="Kfm-jh-IZm" secondAttribute="bottom" constant="8" id="Pgh-4q-kdl"/>
+                            <constraint firstItem="Kfm-jh-IZm" firstAttribute="top" secondItem="Czr-aM-4rd" secondAttribute="top" constant="8" id="PnG-Mp-Yua"/>
+                            <constraint firstItem="Kfm-jh-IZm" firstAttribute="centerX" secondItem="htY-sn-Frs" secondAttribute="centerX" id="Srf-t2-dYO"/>
+                            <constraint firstItem="HDP-cd-aIk" firstAttribute="top" secondItem="Hzq-22-GFd" secondAttribute="bottom" constant="10" id="Tjx-MI-Lip"/>
+                            <constraint firstItem="HDP-cd-aIk" firstAttribute="centerX" secondItem="Kfm-jh-IZm" secondAttribute="centerX" id="Yqb-AH-ggz"/>
+                            <constraint firstItem="zOB-gW-zRd" firstAttribute="centerX" secondItem="Kfm-jh-IZm" secondAttribute="centerX" id="c60-nk-G2I"/>
+                            <constraint firstItem="Hzq-22-GFd" firstAttribute="centerX" secondItem="Kfm-jh-IZm" secondAttribute="centerX" id="sb8-vg-fbw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="convert" image="thermometer.sun" catalog="system" id="d8N-Hz-SgA"/>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="HDP-cd-aIk" id="D64-wM-1sf"/>
+                        <outlet property="textField" destination="Kfm-jh-IZm" id="slf-kw-ZGW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reR-OE-EEB" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zDa-cT-C6y">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="L8R-7o-e8h" id="9gy-TP-jY8"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-975" y="161"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="thermometer.sun" catalog="system" width="114" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
