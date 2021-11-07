@@ -40,7 +40,6 @@ class ConversionViewController: UIViewController,UITextFieldDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     textField.delegate = self
-    configureHideKeyboardWhenRootViewTapped()
     print("ConversionViewController loaded its view.")
   }
   
@@ -57,6 +56,9 @@ class ConversionViewController: UIViewController,UITextFieldDelegate {
   }
   
   
+  @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+    textField.resignFirstResponder()
+  }
   
   
   @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
@@ -78,16 +80,26 @@ class ConversionViewController: UIViewController,UITextFieldDelegate {
   
   
   
-  func textField(_ textField: UITextField,
-                 shouldChangeCharactersIn
-                    range: NSRange,
-                 replacementString
-                    string: String) -> Bool {
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     
-    let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
-    let replacementTextHasDecimalSeparator = string.range(of: ".")
-    if existingTextHasDecimalSeparator != nil,
-       replacementTextHasDecimalSeparator != nil {
+    guard let text = textField.text else { return false }
+    return hasConcatenationOnlyDecimalNumbersAndDecimalSeparator(string1: text, string2: string)
+    
+  }
+  
+  func hasConcatenationOnlyDecimalNumbersAndDecimalSeparator(string1:String,string2:String) -> Bool {
+    
+    if hasConcatenationMoreThanOneDecimalSeparator(string1: string1, string2: string2) {
+      return false
+    }
+    
+    let allowedCharacters = CharacterSet.decimalDigits.union(["."])
+    let forbiddenCharacters = allowedCharacters.inverted
+    
+    let foundForbiddenCharacters = string2.rangeOfCharacter(from: forbiddenCharacters)
+    
+    
+    if foundForbiddenCharacters != nil {
       return false
     } else {
       return true
@@ -95,6 +107,19 @@ class ConversionViewController: UIViewController,UITextFieldDelegate {
     
   }
   
+  func hasConcatenationMoreThanOneDecimalSeparator(string1:String,string2:String) -> Bool {
+
+    let string1HasDecimalSeperator = string1.range(of: ".")
+    let string2HasDecimalSeperator = string2.range(of: ".")
+    
+    if string1HasDecimalSeperator != nil,
+       string2HasDecimalSeperator != nil {
+      return true
+    } else {
+      return false
+    }
+    
+  }
   
   func updateCelsiusLabel() {
     if let celsiusValue = celsiusValue {
@@ -102,8 +127,6 @@ class ConversionViewController: UIViewController,UITextFieldDelegate {
         celsiusLabel.text = "???"
       }
   }
-  
-  
   
   
   

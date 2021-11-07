@@ -82,13 +82,44 @@ class ConversionViewController: UIViewController,UITextFieldDelegate {
   
   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     
-    let set = CharacterSet(charactersIn: "1234567890.")
-    let inverted = set.inverted
-    let filtered = string.components(separatedBy: inverted).joined(separator: "")
-    return filtered == string
+    guard let text = textField.text else { return false }
+    return hasConcatenationOnlyDecimalNumbersAndDecimalSeparator(string1: text, string2: string)
     
   }
   
+  func hasConcatenationOnlyDecimalNumbersAndDecimalSeparator(string1:String,string2:String) -> Bool {
+    
+    if hasConcatenationMoreThanOneDecimalSeparator(string1: string1, string2: string2) {
+      return false
+    }
+    
+    let allowedCharacters = CharacterSet.decimalDigits.union(["."])
+    let forbiddenCharacters = allowedCharacters.inverted
+    
+    let foundForbiddenCharacters = string2.rangeOfCharacter(from: forbiddenCharacters)
+    
+    
+    if foundForbiddenCharacters != nil {
+      return false 
+    } else {
+      return true
+    }
+    
+  }
+  
+  func hasConcatenationMoreThanOneDecimalSeparator(string1:String,string2:String) -> Bool {
+
+    let string1HasDecimalSeperator = string1.range(of: ".")
+    let string2HasDecimalSeperator = string2.range(of: ".")
+    
+    if string1HasDecimalSeperator != nil,
+       string2HasDecimalSeperator != nil {
+      return true
+    } else {
+      return false
+    }
+    
+  }
   
   func updateCelsiusLabel() {
     if let celsiusValue = celsiusValue {
