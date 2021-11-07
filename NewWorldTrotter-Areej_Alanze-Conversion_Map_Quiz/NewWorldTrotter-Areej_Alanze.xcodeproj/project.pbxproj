@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00256E03272880BD00599DBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00256E02272880BD00599DBC /* AppDelegate.swift */; };
+		00256E05272880BD00599DBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00256E04272880BD00599DBC /* SceneDelegate.swift */; };
+		00256E07272880BD00599DBC /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00256E06272880BD00599DBC /* ConversionViewController.swift */; };
+		00256E0A272880BD00599DBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00256E08272880BD00599DBC /* Main.storyboard */; };
+		00256E0C272880BE00599DBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00256E0B272880BE00599DBC /* Assets.xcassets */; };
+		00256E0F272880BE00599DBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00256E0D272880BE00599DBC /* LaunchScreen.storyboard */; };
+		00256E1727288C8F00599DBC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00256E1627288C8F00599DBC /* MapViewController.swift */; };
+		00256E2127289D5500599DBC /* QuestionsAndAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00256E1E27289D5500599DBC /* QuestionsAndAnswers.swift */; };
+		00256E2227289D5500599DBC /* clap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 00256E1F27289D5500599DBC /* clap.wav */; };
+		00256E2327289D5500599DBC /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00256E2027289D5500599DBC /* Quiz.swift */; };
+		00256E2527289D6900599DBC /* QuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00256E2427289D6900599DBC /* QuizzViewController.swift */; };
+		00256EBC2733F35800599DBC /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00256EBB2733F35800599DBC /* UIViewController+Ext.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00256DFF272880BD00599DBC /* NewWorldTrotter-Areej_Alanze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NewWorldTrotter-Areej_Alanze.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00256E02272880BD00599DBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00256E04272880BD00599DBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		00256E06272880BD00599DBC /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
+		00256E09272880BD00599DBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		00256E0B272880BE00599DBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00256E0E272880BE00599DBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		00256E10272880BE00599DBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00256E1627288C8F00599DBC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		00256E1E27289D5500599DBC /* QuestionsAndAnswers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsAndAnswers.swift; sourceTree = "<group>"; };
+		00256E1F27289D5500599DBC /* clap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clap.wav; sourceTree = "<group>"; };
+		00256E2027289D5500599DBC /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		00256E2427289D6900599DBC /* QuizzViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizzViewController.swift; sourceTree = "<group>"; };
+		00256EBB2733F35800599DBC /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00256DFC272880BD00599DBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00256DF6272880BD00599DBC = {
+			isa = PBXGroup;
+			children = (
+				00256E2627293D4100599DBC /* Quiz */,
+				00256E01272880BD00599DBC /* NewWorldTrotter-Areej_Alanze */,
+				00256E00272880BD00599DBC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00256E00272880BD00599DBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00256DFF272880BD00599DBC /* NewWorldTrotter-Areej_Alanze.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00256E01272880BD00599DBC /* NewWorldTrotter-Areej_Alanze */ = {
+			isa = PBXGroup;
+			children = (
+				00256EBD2733F43500599DBC /* Controller */,
+				00256EBA2733F32100599DBC /* Extension */,
+				00256E02272880BD00599DBC /* AppDelegate.swift */,
+				00256E04272880BD00599DBC /* SceneDelegate.swift */,
+				00256E08272880BD00599DBC /* Main.storyboard */,
+				00256E0B272880BE00599DBC /* Assets.xcassets */,
+				00256E0D272880BE00599DBC /* LaunchScreen.storyboard */,
+				00256E10272880BE00599DBC /* Info.plist */,
+			);
+			path = "NewWorldTrotter-Areej_Alanze";
+			sourceTree = "<group>";
+		};
+		00256E2627293D4100599DBC /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				00256E2427289D6900599DBC /* QuizzViewController.swift */,
+				00256E2027289D5500599DBC /* Quiz.swift */,
+				00256E1E27289D5500599DBC /* QuestionsAndAnswers.swift */,
+				00256E1F27289D5500599DBC /* clap.wav */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		00256EBA2733F32100599DBC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				00256EBB2733F35800599DBC /* UIViewController+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		00256EBD2733F43500599DBC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00256E1627288C8F00599DBC /* MapViewController.swift */,
+				00256E06272880BD00599DBC /* ConversionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00256DFE272880BD00599DBC /* NewWorldTrotter-Areej_Alanze */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00256E13272880BE00599DBC /* Build configuration list for PBXNativeTarget "NewWorldTrotter-Areej_Alanze" */;
+			buildPhases = (
+				00256DFB272880BD00599DBC /* Sources */,
+				00256DFC272880BD00599DBC /* Frameworks */,
+				00256DFD272880BD00599DBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NewWorldTrotter-Areej_Alanze";
+			productName = "NewWorldTrotter-Areej_Alanze";
+			productReference = 00256DFF272880BD00599DBC /* NewWorldTrotter-Areej_Alanze.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00256DF7272880BD00599DBC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					00256DFE272880BD00599DBC = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 00256DFA272880BD00599DBC /* Build configuration list for PBXProject "NewWorldTrotter-Areej_Alanze" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00256DF6272880BD00599DBC;
+			productRefGroup = 00256E00272880BD00599DBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00256DFE272880BD00599DBC /* NewWorldTrotter-Areej_Alanze */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00256DFD272880BD00599DBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00256E2227289D5500599DBC /* clap.wav in Resources */,
+				00256E0F272880BE00599DBC /* LaunchScreen.storyboard in Resources */,
+				00256E0C272880BE00599DBC /* Assets.xcassets in Resources */,
+				00256E0A272880BD00599DBC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00256DFB272880BD00599DBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00256E2127289D5500599DBC /* QuestionsAndAnswers.swift in Sources */,
+				00256E07272880BD00599DBC /* ConversionViewController.swift in Sources */,
+				00256E2327289D5500599DBC /* Quiz.swift in Sources */,
+				00256E03272880BD00599DBC /* AppDelegate.swift in Sources */,
+				00256EBC2733F35800599DBC /* UIViewController+Ext.swift in Sources */,
+				00256E2527289D6900599DBC /* QuizzViewController.swift in Sources */,
+				00256E05272880BD00599DBC /* SceneDelegate.swift in Sources */,
+				00256E1727288C8F00599DBC /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		00256E08272880BD00599DBC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00256E09272880BD00599DBC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		00256E0D272880BE00599DBC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00256E0E272880BE00599DBC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00256E11272880BE00599DBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		00256E12272880BE00599DBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		00256E14272880BE00599DBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U95YF74XMG;
+				INFOPLIST_FILE = "NewWorldTrotter-Areej_Alanze/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.areej.NewWorldTrotter-Areej-Alanze";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00256E15272880BE00599DBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U95YF74XMG;
+				INFOPLIST_FILE = "NewWorldTrotter-Areej_Alanze/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.areej.NewWorldTrotter-Areej-Alanze";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00256DFA272880BD00599DBC /* Build configuration list for PBXProject "NewWorldTrotter-Areej_Alanze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00256E11272880BE00599DBC /* Debug */,
+				00256E12272880BE00599DBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00256E13272880BE00599DBC /* Build configuration list for PBXNativeTarget "NewWorldTrotter-Areej_Alanze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00256E14272880BE00599DBC /* Debug */,
+				00256E15272880BE00599DBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00256DF7272880BD00599DBC /* Project object */;
+}
