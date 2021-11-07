@@ -1,6 +1,6 @@
 import UIKit
 
-class CustomeButton:UIButton {
+class CustomeButton: UIButton {
   
   
   override init(frame: CGRect) {
@@ -8,22 +8,34 @@ class CustomeButton:UIButton {
   }
   
   
-  init(button:UIButton,name:String
-       , color: UIColor, tintColor : UIColor) {
+  init(imageName: String,
+       cornerRadius: CGFloat,
+       backgroundColor: UIColor,
+       tintColor : UIColor) {
     
     super.init(frame: .zero)
     
-    self.backgroundColor = UIColor.white.withAlphaComponent(0.9)
-    self.setImage(UIImage(named: name), for: .normal)
-    self.layer.cornerRadius = 6
-    self.translatesAutoresizingMaskIntoConstraints = false
-    self.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+    self.backgroundColor = backgroundColor
+    self.setImage(UIImage(named: imageName), for: .normal)
+    self.layer.cornerRadius = cornerRadius
     self.tintColor = tintColor
+    
+    configure()
   }
   
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  
+  func configure() {
+    self.contentEdgeInsets = UIEdgeInsets(top: 8,
+                                          left: 8,
+                                          bottom: 8,
+                                          right: 8)
+    
+    self.translatesAutoresizingMaskIntoConstraints = false
   }
 }
 

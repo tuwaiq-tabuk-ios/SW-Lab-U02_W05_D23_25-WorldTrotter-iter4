@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CustomeSegment:UISegmentedControl {
+class CustomeSegment: UISegmentedControl {
   
   
   override init(frame: CGRect) {
@@ -16,23 +16,32 @@ class CustomeSegment:UISegmentedControl {
   }
   
   
-  init(segment:[String],color: UIColor , index :Int) {
+  init(segment: [String],
+       color: UIColor ,
+       index :Int) {
     
     super.init(frame: .zero)
-    self.insertSegment(withTitle: segment[0], at: 1, animated: false)
-    self.insertSegment(withTitle: segment[1], at: 2, animated: false)
-    self.insertSegment(withTitle: segment[2], at: 3, animated: false)
+    
+    self.insertSegment(withTitle: segment[0], at: 0, animated: false)
+    self.insertSegment(withTitle: segment[1], at: 1, animated: false)
+    self.insertSegment(withTitle: segment[2], at: 2, animated: false)
+    
     self.backgroundColor = color
+    
     self.selectedSegmentIndex = index
-    self.translatesAutoresizingMaskIntoConstraints = false
+    
+    configure()
   }
   
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
+
+  
+  
+  func configure() {
+    self.translatesAutoresizingMaskIntoConstraints = false
+  }
+  
 }
-//let segmentedControl =
-
-
-
