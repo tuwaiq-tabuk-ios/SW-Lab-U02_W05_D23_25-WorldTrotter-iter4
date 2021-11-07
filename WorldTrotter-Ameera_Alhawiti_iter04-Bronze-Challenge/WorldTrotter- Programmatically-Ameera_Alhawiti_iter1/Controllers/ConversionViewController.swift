@@ -1,9 +1,7 @@
 import UIKit
 
-
-class ConversionViewController: UIViewController, UITextFieldDelegate {
-  
-  
+class ConversionViewController: UIViewController {
+    
   @IBOutlet var celsiusLabel: UILabel!
   @IBOutlet var textField: UITextField!
   
@@ -56,34 +54,4 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
       celsiusLabel.text = "???"
     }
   }
-  
-  func textField(_ textField: UITextField,
-                 shouldChangeCharactersIn range: NSRange,
-                 replacementString string: String) -> Bool {
-    
-    let letterCharacters = NSCharacterSet.letters
-    let spaceCharacters = NSCharacterSet.whitespacesAndNewlines
-    let punctuationAndSpecialCharacters = CharacterSet.init(charactersIn: "!#$&@~()[];,<>/?*|'\'" )
-    
-    let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
-    let replacementTextHasDecimalSeparator = string.range(of: ".")
-    let containLetterCharacter = string.rangeOfCharacter(from: letterCharacters)
-    let containSpacesAndNewLineCharacters = string.rangeOfCharacter(from: spaceCharacters)
-    let containPunctuationAndSpecialCharacters = string.rangeOfCharacter(from: punctuationAndSpecialCharacters)
-    
-    if existingTextHasDecimalSeparator != nil,
-       replacementTextHasDecimalSeparator != nil {
-      return false
-    } else if containLetterCharacter != nil {
-      return false
-    } else if containSpacesAndNewLineCharacters != nil {
-      return false
-    } else if containPunctuationAndSpecialCharacters != nil {
-      return false
-    } else {
-      return true
-    }
-  }
 }
-
-

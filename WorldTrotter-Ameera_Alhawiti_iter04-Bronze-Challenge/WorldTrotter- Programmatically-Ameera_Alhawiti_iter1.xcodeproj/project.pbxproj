@@ -14,6 +14,7 @@
 		20176DC6272539F100CE7B2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20176DC5272539F100CE7B2E /* Assets.xcassets */; };
 		20176DC9272539F100CE7B2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20176DC7272539F100CE7B2E /* LaunchScreen.storyboard */; };
 		2098A89B2727F22D004BAD2A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2098A89A2727F22D004BAD2A /* MapViewController.swift */; };
+		20A61EE62738089600CECEA2 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A61EE52738089600CECEA2 /* UITextField+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		20176DC8272539F100CE7B2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20176DCA272539F100CE7B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2098A89A2727F22D004BAD2A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		20A61EE52738089600CECEA2 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +60,10 @@
 		20176DBB272539F000CE7B2E /* WorldTrotter- Programmatically-Ameera_Alhawiti_iter1 */ = {
 			isa = PBXGroup;
 			children = (
+				20A61EE42737F3EF00CECEA2 /* Extension */,
 				204433BB272FFEC600C5D8F7 /* Support */,
-				2071EADB27297AF90058E92E /* ConversionController */,
+				2071EADB27297AF90058E92E /* Controllers */,
 				20176DC2272539F000CE7B2E /* Main.storyboard */,
-				2071EADA27297AAA0058E92E /* MapController */,
 				20176DCA272539F100CE7B2E /* Info.plist */,
 			);
 			path = "WorldTrotter- Programmatically-Ameera_Alhawiti_iter1";
@@ -78,20 +80,21 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		2071EADA27297AAA0058E92E /* MapController */ = {
-			isa = PBXGroup;
-			children = (
-				2098A89A2727F22D004BAD2A /* MapViewController.swift */,
-			);
-			path = MapController;
-			sourceTree = "<group>";
-		};
-		2071EADB27297AF90058E92E /* ConversionController */ = {
+		2071EADB27297AF90058E92E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				20176DC0272539F000CE7B2E /* ConversionViewController.swift */,
+				2098A89A2727F22D004BAD2A /* MapViewController.swift */,
 			);
-			path = ConversionController;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		20A61EE42737F3EF00CECEA2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				20A61EE52738089600CECEA2 /* UITextField+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20176DC1272539F000CE7B2E /* ConversionViewController.swift in Sources */,
+				20A61EE62738089600CECEA2 /* UITextField+Ext.swift in Sources */,
 				20176DBD272539F000CE7B2E /* AppDelegate.swift in Sources */,
 				20176DBF272539F000CE7B2E /* SceneDelegate.swift in Sources */,
 				2098A89B2727F22D004BAD2A /* MapViewController.swift in Sources */,
