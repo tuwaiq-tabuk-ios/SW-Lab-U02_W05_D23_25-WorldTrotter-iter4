@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE2C69ED2737E9E30037AA5F /* UIVIewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2C69EC2737E9E30037AA5F /* UIVIewController+Ext.swift */; };
 		AE2CCC5B2727F015007AA040 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CCC5A2727F015007AA040 /* MapViewController.swift */; };
 		AE44F80427253A7800663E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE44F80327253A7800663E74 /* AppDelegate.swift */; };
 		AE44F80627253A7800663E74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE44F80527253A7800663E74 /* SceneDelegate.swift */; };
@@ -14,11 +15,10 @@
 		AE44F80B27253A7800663E74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE44F80927253A7800663E74 /* Main.storyboard */; };
 		AE44F80D27253A7900663E74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE44F80C27253A7900663E74 /* Assets.xcassets */; };
 		AE44F81027253A7900663E74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE44F80E27253A7900663E74 /* LaunchScreen.storyboard */; };
-		AE7CD667272FC2F60043EEAD /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7CD666272FC2F60043EEAD /* UIColor+Extension.swift */; };
-		AE7CD66A272FC5A00043EEAD /* CMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7CD669272FC5A00043EEAD /* CMLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE2C69EC2737E9E30037AA5F /* UIVIewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIVIewController+Ext.swift"; path = "../../../Prototype-Delegate-TextField-\"Reema.Mousa\" 2/Prototype-Delegate-TextField-\"Reema.Mousa\"/UIVIewController+Ext.swift"; sourceTree = "<group>"; };
 		AE2CCC5A2727F015007AA040 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AE44F80027253A7700663E74 /* WorldTrotter- Programmatically-  “Reema.Mousa”-iter1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldTrotter- Programmatically-  “Reema.Mousa”-iter1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE44F80327253A7800663E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -28,8 +28,6 @@
 		AE44F80C27253A7900663E74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE44F80F27253A7900663E74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE44F81127253A7900663E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE7CD666272FC2F60043EEAD /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		AE7CD669272FC5A00043EEAD /* CMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +44,6 @@
 		AE44F7F727253A7700663E74 = {
 			isa = PBXGroup;
 			children = (
-				AE7CD668272FC5750043EEAD /* Custom_View  */,
 				AE7CD665272FC2B00043EEAD /* extension */,
 				AE44F80227253A7700663E74 /* WorldTrotter- Programmatically-  “Reema.Mousa”-iter1 */,
 				AEB3FD5C2728874200297CDF /* Controller  */,
@@ -77,17 +74,9 @@
 		AE7CD665272FC2B00043EEAD /* extension */ = {
 			isa = PBXGroup;
 			children = (
-				AE7CD666272FC2F60043EEAD /* UIColor+Extension.swift */,
+				AE2C69EC2737E9E30037AA5F /* UIVIewController+Ext.swift */,
 			);
 			path = extension;
-			sourceTree = "<group>";
-		};
-		AE7CD668272FC5750043EEAD /* Custom_View  */ = {
-			isa = PBXGroup;
-			children = (
-				AE7CD669272FC5A00043EEAD /* CMLabel.swift */,
-			);
-			path = "Custom_View ";
 			sourceTree = "<group>";
 		};
 		AEB3FD58272886D600297CDF /* View */ = {
@@ -180,10 +169,9 @@
 			files = (
 				AE44F80827253A7800663E74 /* ConversionViewController.swift in Sources */,
 				AE44F80427253A7800663E74 /* AppDelegate.swift in Sources */,
-				AE7CD66A272FC5A00043EEAD /* CMLabel.swift in Sources */,
+				AE2C69ED2737E9E30037AA5F /* UIVIewController+Ext.swift in Sources */,
 				AE44F80627253A7800663E74 /* SceneDelegate.swift in Sources */,
 				AE2CCC5B2727F015007AA040 /* MapViewController.swift in Sources */,
-				AE7CD667272FC2F60043EEAD /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -104,9 +104,6 @@
                             <constraint firstItem="AjM-Ph-tZM" firstAttribute="trailing" secondItem="qsq-2A-PWv" secondAttribute="trailing" constant="30" id="x6O-J2-P41"/>
                             <constraint firstItem="UWC-w0-BQ9" firstAttribute="top" secondItem="AjM-Ph-tZM" secondAttribute="top" constant="8" id="xP8-yM-kei"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="Fys-BA-9qX" appends="YES" id="e0Q-d5-Cd8"/>
-                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Convert " image="ConvertIcon" id="2FB-Lk-3Hd"/>
                     <connections>
@@ -115,11 +112,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FF7-cz-sRl" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Fys-BA-9qX">
-                    <connections>
-                        <action selector="dismissKeyboard:" destination="as2-P0-jK5" id="hHD-9S-LQK"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2318.840579710145" y="977.67857142857133"/>
         </scene>

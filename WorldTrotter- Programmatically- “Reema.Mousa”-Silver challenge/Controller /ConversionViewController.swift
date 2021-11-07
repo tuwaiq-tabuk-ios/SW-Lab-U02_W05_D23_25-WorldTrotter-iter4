@@ -18,6 +18,7 @@ class ConversionViewController: UIViewController ,UITextFieldDelegate   {
   
   var fahrenheitValue: Measurement<UnitTemperature>?{
     didSet{
+      configureHideKeyboardwhenRootViewTapped() 
       updateCelsiusLabel()
     }
   }
@@ -64,7 +65,8 @@ class ConversionViewController: UIViewController ,UITextFieldDelegate   {
   }
   
   
-  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+                 replacementString string: String) -> Bool {
     print("Current text: \(String(describing: textField.text))")
     print("Replacement text: <\(string)> ", terminator: "")
     

@@ -18,6 +18,7 @@ class ConversionViewController: UIViewController ,UITextFieldDelegate   {
   
   var fahrenheitValue: Measurement<UnitTemperature>?{
     didSet{
+      configureHideKeyboardwhenRootViewTapped()
       updateCelsiusLabel()
     }
   }
