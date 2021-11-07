@@ -6,12 +6,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
   
   var mapView: MKMapView!
   var userLocation = CLLocationManager()
-  
   override func loadView() {
     mapView = MKMapView()
     view = mapView
     
-          
     let segmentedControl
       = UISegmentedControl(items: ["Standar", "Hybird", "Satelite"])
     segmentedControl.backgroundColor = UIColor.systemBackground
@@ -52,47 +50,36 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
       break
     }
   }
-  
-  
+  /// YOU ARE HERE
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    //    self.userLocation.requestWhenInUseAuthorization()
+    //    self.userLocation.delegate = self
+    //    self.userLocation.desiredAccuracy = kCLLocationAccuracyBest
+    //    self.userLocation.startUpdatingLocation()
+    //    self.mapView.showsUserLocation = true
+    //    self.mapView.userTrackingMode = .follow
+    
     
     print("MapViewController loaded its view.")
-    
+    buttonPressedToFind()
+  }
+  
+  func buttonPressedToFind(){
+    userLocation.requestWhenInUseAuthorization()
     userLocation.delegate = self
-    
-    locationManagerDidChangeAuthorization(userLocation)
+    userLocation.desiredAccuracy = kCLLocationAccuracyBest
+    userLocation.startUpdatingLocation()
     mapView.showsUserLocation = true
     mapView.userTrackingMode = .follow
     
   }
   
-  
-  func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+  func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+    let span = MKCoordinateSpan(latitudeDelta: 500, longitudeDelta: 500)
+    let theRegion = MKCoordinateRegion(center: userLocation.coordinate, span: span)
+    mapView.setRegion(theRegion, animated: true)
     print(#function)
-    
-    
-    if userLocation.authorizationStatus == .notDetermined{
-      userLocation.requestWhenInUseAuthorization()
-    } else {
-      userLocation.requestAlwaysAuthorization()
-    }
-    
- 
-    
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-      let span = MKCoordinateSpan(latitudeDelta: 0.08, longitudeDelta: 0.08)
-      let theRegion = MKCoordinateRegion(center: userLocation.coordinate, span: span)
-      mapView.setRegion(theRegion, animated: true)
-      print("Line 90")
-    }
   }
-  
 }
-
-
-
-
-
-
