@@ -6,12 +6,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
   
   var mapView: MKMapView!
   var userLocation = CLLocationManager()
+  
   override func loadView() {
     mapView = MKMapView()
     view = mapView
-    
+        
     let segmentedControl
-      = UISegmentedControl(items: ["Standar", "Hybird", "Satelite"])
+    = UISegmentedControl(items: ["Standar", "Hybird", "Satelite"])
     segmentedControl.backgroundColor = UIColor.systemBackground
     segmentedControl.selectedSegmentIndex = 0
     
@@ -24,13 +25,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     view.addSubview(segmentedControl)
     
     let topConstraint
-      = segmentedControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8)
+    = segmentedControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8)
     
     let margins = view.layoutMarginsGuide
     let leadingConstraint
-      = segmentedControl.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
+    = segmentedControl.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
     let trailingConstraint
-      = segmentedControl.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
+    = segmentedControl.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
     
     topConstraint.isActive = true
     leadingConstraint.isActive = true
@@ -50,36 +51,32 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
       break
     }
   }
-  /// YOU ARE HERE
   
+    
   override func viewDidLoad() {
     super.viewDidLoad()
-    //    self.userLocation.requestWhenInUseAuthorization()
-    //    self.userLocation.delegate = self
-    //    self.userLocation.desiredAccuracy = kCLLocationAccuracyBest
-    //    self.userLocation.startUpdatingLocation()
-    //    self.mapView.showsUserLocation = true
-    //    self.mapView.userTrackingMode = .follow
-    
     
     print("MapViewController loaded its view.")
-    buttonPressedToFind()
+    userLocation.delegate = self
+    mapView.delegate = self
+    mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
+    locationManagerDidChangeAuthorization(userLocation)
   }
   
-  func buttonPressedToFind(){
-    userLocation.requestWhenInUseAuthorization()
-    userLocation.delegate = self
-    userLocation.desiredAccuracy = kCLLocationAccuracyBest
-    userLocation.startUpdatingLocation()
-    mapView.showsUserLocation = true
-    mapView.userTrackingMode = .follow
     
+  func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+    if userLocation.authorizationStatus == .notDetermined{
+      userLocation.requestWhenInUseAuthorization()
+    } else {
+      userLocation.requestAlwaysAuthorization()
+    }
   }
+  
   
   func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-    let span = MKCoordinateSpan(latitudeDelta: 500, longitudeDelta: 500)
+    let span = MKCoordinateSpan(latitudeDelta: 0.08, longitudeDelta: 0.08)
     let theRegion = MKCoordinateRegion(center: userLocation.coordinate, span: span)
     mapView.setRegion(theRegion, animated: true)
-    print(#function)
   }
 }
+

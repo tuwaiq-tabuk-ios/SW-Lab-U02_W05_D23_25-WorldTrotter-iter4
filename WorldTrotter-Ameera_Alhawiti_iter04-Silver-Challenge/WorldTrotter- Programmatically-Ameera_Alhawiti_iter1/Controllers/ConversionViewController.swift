@@ -7,12 +7,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet var celsiusLabel: UILabel!
   @IBOutlet var textField: UITextField!
   
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     print("ConversionViewController loaded its view.")
     updateCelsiusLabel()
     configureHideKeyboardWhenRootViewTapped()
-    textField.delegate = self
   }
   
   var fahrenheitValue: Measurement<UnitTemperature>?{
@@ -44,9 +44,11 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     }
   }
   
+  
   @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
     textField.resignFirstResponder()
   }
+  
   
   func updateCelsiusLabel() {
     if let celsiusValue = celsiusValue {
@@ -84,3 +86,5 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     }
   }
 }
+
+
