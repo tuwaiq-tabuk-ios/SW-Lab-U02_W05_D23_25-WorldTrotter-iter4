@@ -61,11 +61,11 @@
 				BFBA6B8C272539B200EC99D6 /* AppDelegate.swift */,
 				BFBA6B8E272539B200EC99D6 /* SceneDelegate.swift */,
 				BFBA6B90272539B200EC99D6 /* ConversionViewController.swift */,
+				BFCAC94D27283EE5000EABFF /* MapViewController.swift */,
 				BFBA6B92272539B200EC99D6 /* Main.storyboard */,
 				BFBA6B95272539B300EC99D6 /* Assets.xcassets */,
 				BFBA6B97272539B300EC99D6 /* LaunchScreen.storyboard */,
 				BFBA6B9A272539B300EC99D6 /* Info.plist */,
-				BFCAC94D27283EE5000EABFF /* MapViewController.swift */,
 			);
 			path = "WorldTrotter-arwa_balawi-iter1";
 			sourceTree = "<group>";

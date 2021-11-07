@@ -1,12 +1,11 @@
-
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
   
   var mapView: MKMapView!
-  var locationManager: CLLocationManager?
-  
+  var locationManager = CLLocationManager()
   var segmentedControl: UISegmentedControl!
   var poiSwitch: UISwitch!
   var poiLabel: UILabel!
@@ -16,13 +15,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
   var poiLabelCenterConstraint: NSLayoutConstraint!
   
   override func loadView() {
-    // Create a map view
-    mapView = MKMapView()
-    mapView.delegate = self
-    locationManager = CLLocationManager()
-    locationManager!.delegate = self
     
-    // Set it as *the* view of this view controller
+    mapView = MKMapView()
+    
     view = mapView
     
     let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
@@ -34,7 +29,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     segmentedControl.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(segmentedControl)
     
-    let topConstraint = segmentedControl.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8)
+    let topConstraint = segmentedControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8)
     
     let margins = view.layoutMarginsGuide
     let leadingConstraint = segmentedControl.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
@@ -44,9 +39,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     leadingConstraint.isActive = true
     trailingConstraint.isActive = true
     
-    initLocalizationButton(segmentedControl)
-    
-    // POI label & switch
     
     poiLabel = UILabel()
     poiLabel.text = "Points of Interest"
@@ -60,25 +52,29 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     poiSwitch.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(poiSwitch)
     
-    // vertical constraints
     poiSwitchTopConstraint = poiSwitch.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 8)
     poiLabelCenterConstraint = poiLabel.centerYAnchor.constraint(equalTo: poiSwitch.centerYAnchor)
     poiLabelTopConstraint = poiLabel.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 8)
     poiSwitchCenterConstraint = poiSwitch.centerYAnchor.constraint(equalTo: poiLabel.centerYAnchor)
     updateVerticalPoiConstraints()
     
-    // Horizontal constraints
-    // Put the label on the left side of the screen, then put the switch after the label
     let poiLabelLeadingConstraint = poiLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
     let poiSwitchLeadingConstraint = poiSwitch.leadingAnchor.constraint(equalTo: poiLabel.trailingAnchor, constant: 8)
     poiLabelLeadingConstraint.isActive = true
     poiSwitchLeadingConstraint.isActive = true
   }
   
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     print("MapViewController loaded its view.")
+    locationManager.delegate = self
+    mapView.delegate = self
+    locationManager.requestWhenInUseAuthorization()
+    mapView.showsUserLocation = true
+    mapView.userTrackingMode = .follow
   }
+  
   
   @objc func mapTypeChanged(_ segControl: UISegmentedControl) {
     switch segControl.selectedSegmentIndex {
@@ -112,13 +108,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
   
   func updateVerticalPoiConstraints()
   {
-    
     if poiLabel.intrinsicContentSize.height < poiSwitch.intrinsicContentSize.height
     {
       poiSwitchTopConstraint.isActive = true
       poiLabelCenterConstraint.isActive = true
       poiLabelTopConstraint.isActive = false
-      poiSwitchCenterConstraint.isActive = false        }
+      poiSwitchCenterConstraint.isActive = false
+    }
     else
     {
       poiLabelTopConstraint.isActive = true
@@ -126,53 +122,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
       poiSwitchTopConstraint.isActive = false
       poiLabelCenterConstraint.isActive = false
     }
-    
   }
   
-  
-  func initLocalizationButton(_ anyView: UIView!){
-    let localizationButton = UIButton.init(type: .system)
-    localizationButton.setTitle("Localization", for: .normal)
-    localizationButton.translatesAutoresizingMaskIntoConstraints = false
-    localizationButton.tintColor = .orange
-    localizationButton.layer.borderWidth = 3
-    
-    localizationButton.backgroundColor = UIColor.lightGray.withAlphaComponent(0.6)
-        
-    
-    view.addSubview(localizationButton)
-    
-    //Constraints
-    let topConstraint = localizationButton.topAnchor
-      .constraint(equalTo:anyView.topAnchor, constant: 65 )
-    let leadingConstraint =
-      localizationButton.leadingAnchor
-      .constraint(equalTo: view.layoutMarginsGuide.leadingAnchor)
-    let trailingConstraint = localizationButton.trailingAnchor
-      .constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
-    
-    topConstraint.isActive = true
-    leadingConstraint.isActive = true
-    trailingConstraint.isActive = true
-    
-    localizationButton.addTarget(self, action: #selector(MapViewController.showLocalization(sender:)), for: .touchUpInside)
-  }
-  
-  @objc func showLocalization(sender: UIButton!){
-    locationManager!.requestWhenInUseAuthorization()//se agrega permiso en info.plist
-    mapView.showsUserLocation = true //fire up the method mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation)
-    mapView.userTrackingMode = .follow
-  }
-  
-  //    func showLocalization(sender: UIButton!) {
-  //        locationManager?.requestWhenInUseAuthorization()
-  //        self.mapView(mapView, didUpdate: location)
-  //    }
   
   func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-    //This is a method from MKMapViewDelegate, fires up when the user`s location changes
-    let zoomedInCurrentLocation = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: 780, longitudinalMeters: 750)
-    mapView.setRegion(zoomedInCurrentLocation, animated: true)
+    let span = MKCoordinateSpan(latitudeDelta:0.08, longitudeDelta: 0.08)
+    let theRegion = MKCoordinateRegion(center:userLocation.coordinate, span: span)
+    mapView.setRegion(theRegion, animated: true)
   }
 }
-
