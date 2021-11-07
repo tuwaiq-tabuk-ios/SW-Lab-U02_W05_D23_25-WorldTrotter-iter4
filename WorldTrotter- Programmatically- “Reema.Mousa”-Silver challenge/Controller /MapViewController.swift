@@ -37,8 +37,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
     labelMap = UILabel()
     labelMap.text = "Points of Interest"
     labelMap.translatesAutoresizingMaskIntoConstraints = false
-    
-    
+     
     //switch
     switchMap = UISwitch()
     switchMap.addTarget(self,
@@ -55,23 +54,19 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
     NSLayoutConstraint.activate ([
       
       segmentedControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
-      
       segmentedControl.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
       
       segmentedControl.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
       
       switchMap.centerYAnchor.constraint(equalTo: labelMap.centerYAnchor),
-      
       switchMap.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 8),
       
       labelMap.centerYAnchor.constraint(equalTo: switchMap.centerYAnchor),
-      
       labelMap.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 8),
       
       // constraints Y
       
       labelMap.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
-      
       switchMap.leadingAnchor.constraint(equalTo: labelMap.trailingAnchor, constant: 8)
     ])
     
