@@ -48,7 +48,7 @@ class ConversionViewController: UIViewController  {
     
     updateCelsiusLabel()
     
- // textField.delegate = true
+    textField.delegate = true as! UITextFieldDelegate
   }
   
   @IBAction func fahrenheitFieldEditingChanged(_ textField : UITextField) {
