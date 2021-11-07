@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2W3-Wl-KkB">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map - -->
+        <scene sceneID="gPY-nS-h1q">
+            <objects>
+                <viewController id="RF5-fK-D0Q" customClass="MapViewController" customModule="WorldTrotter__Programmatically____Bushra_Oudah__iter1" customModuleProvider="target" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="IbM-Th-6Sc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </mapView>
+                    <tabBarItem key="tabBarItem" title="Map -" image="map" catalog="system" id="0px-mq-dMe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OjT-Oz-1LY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-874" y="153"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vT7-yL-Znk">
+            <objects>
+                <tabBarController id="2W3-Wl-KkB" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fhR-Zh-M1z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="y3w-bx-Qp2"/>
+                        <segue destination="RF5-fK-D0Q" kind="relationship" relationship="viewControllers" id="y7g-Vy-to9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lID-mA-Dvc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318" y="-576"/>
+        </scene>
+        <!--convert-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter__Programmatically____Bushra_Oudah__iter1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="conversionViewCountroller">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bRR-C5-bQ1">
+                                <rect key="frame" x="100" y="51.999999999999993" width="190" height="93.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="acM-cC-Q6S"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahreheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMi-iX-APo">
+                                <rect key="frame" x="57" y="155.33333333333334" width="276" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppC-zG-tko">
+                                <rect key="frame" x="138" y="238.33333333333337" width="114" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lL-6F-bri">
+                                <rect key="frame" x="164.66666666666666" y="321.33333333333331" width="61" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ura-OZ-mtM">
+                                <rect key="frame" x="72.333333333333329" y="374.33333333333331" width="245.33333333333337" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.92941176889999999" blue="0.92941176889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="WMi-iX-APo" firstAttribute="centerX" secondItem="bRR-C5-bQ1" secondAttribute="centerX" id="3Rx-aq-xTP"/>
+                            <constraint firstItem="ppC-zG-tko" firstAttribute="top" secondItem="WMi-iX-APo" secondAttribute="bottom" constant="40" id="9g2-yc-M9x"/>
+                            <constraint firstItem="bRR-C5-bQ1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BIb-TY-uqa"/>
+                            <constraint firstItem="4lL-6F-bri" firstAttribute="top" secondItem="ppC-zG-tko" secondAttribute="bottom" constant="40" id="NsR-tk-onl"/>
+                            <constraint firstItem="ppC-zG-tko" firstAttribute="centerX" secondItem="bRR-C5-bQ1" secondAttribute="centerX" id="UiP-2V-qZV"/>
+                            <constraint firstItem="Ura-OZ-mtM" firstAttribute="top" secondItem="4lL-6F-bri" secondAttribute="bottom" constant="10" id="YiG-kP-zs5"/>
+                            <constraint firstItem="bRR-C5-bQ1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="iUa-5E-hHZ"/>
+                            <constraint firstItem="4lL-6F-bri" firstAttribute="centerX" secondItem="bRR-C5-bQ1" secondAttribute="centerX" id="kng-fW-3Ty"/>
+                            <constraint firstItem="WMi-iX-APo" firstAttribute="top" secondItem="bRR-C5-bQ1" secondAttribute="bottom" constant="10" id="paD-YL-bWM"/>
+                            <constraint firstItem="Ura-OZ-mtM" firstAttribute="centerX" secondItem="bRR-C5-bQ1" secondAttribute="centerX" id="qGm-uy-tbl"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HuM-gq-rv2" appends="YES" id="x7n-5h-51r"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="convert" image="thermometer.sun" catalog="system" id="khs-ld-Jzb"/>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="4lL-6F-bri" id="Vzi-lM-k4H"/>
+                        <outlet property="textField" destination="bRR-C5-bQ1" id="AoJ-XI-trX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HuM-gq-rv2">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="y0c-hc-37Z"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="270.76923076923077" y="152.84360189573459"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="thermometer.sun" catalog="system" width="114" height="128"/>
+    </resources>
+</document>
