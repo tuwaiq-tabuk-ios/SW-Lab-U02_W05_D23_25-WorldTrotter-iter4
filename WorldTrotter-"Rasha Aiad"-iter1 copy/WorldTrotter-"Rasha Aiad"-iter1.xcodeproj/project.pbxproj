@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DABAD88F273174A5006D6161 /* Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABAD88E273174A5006D6161 /* Convert.swift */; };
+		DAC358262727F25100BBDAAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC358252727F25100BBDAAA /* AppDelegate.swift */; };
+		DAC358282727F25100BBDAAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC358272727F25100BBDAAA /* SceneDelegate.swift */; };
+		DAC3582D2727F25100BBDAAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC3582B2727F25100BBDAAA /* Main.storyboard */; };
+		DAC3582F2727F25100BBDAAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC3582E2727F25100BBDAAA /* Assets.xcassets */; };
+		DAC358322727F25100BBDAAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC358302727F25100BBDAAA /* LaunchScreen.storyboard */; };
+		DAFC5D9727292AD30048815D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC5D9627292AD30048815D /* ViewController.swift */; };
+		DAFC5D9B2729494D0048815D /* MapVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC5D9A2729494D0048815D /* MapVc.swift */; };
+		DAFC5D9D27294D0D0048815D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC5D9C27294D0D0048815D /* Question.swift */; };
+		DAFC5D9F27294D110048815D /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC5D9E27294D110048815D /* QuestionManager.swift */; };
+		DAFC5DA127295CD00048815D /* questionViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC5DA027295CD00048815D /* questionViewContorller.swift */; };
+		DAFC5DA5272961020048815D /* clapping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAFC5DA4272961020048815D /* clapping.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DABAD88E273174A5006D6161 /* Convert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convert.swift; sourceTree = "<group>"; };
+		DAC358222727F25100BBDAAA /* WorldTrotter-"Rasha Aiad"-iter1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldTrotter-\"Rasha Aiad\"-iter1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC358252727F25100BBDAAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAC358272727F25100BBDAAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DAC3582C2727F25100BBDAAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAC3582E2727F25100BBDAAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAC358312727F25100BBDAAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAC358332727F25100BBDAAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAFC5D9627292AD30048815D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAFC5D9A2729494D0048815D /* MapVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVc.swift; sourceTree = "<group>"; };
+		DAFC5D9C27294D0D0048815D /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		DAFC5D9E27294D110048815D /* QuestionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
+		DAFC5DA027295CD00048815D /* questionViewContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionViewContorller.swift; sourceTree = "<group>"; };
+		DAFC5DA4272961020048815D /* clapping.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clapping.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAC3581F2727F25100BBDAAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAB91F752733E8FB00B8350E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAFC5D9E27294D110048815D /* QuestionManager.swift */,
+				DAFC5D9C27294D0D0048815D /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAB91F762733E92600B8350E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAC3582B2727F25100BBDAAA /* Main.storyboard */,
+				DAC358302727F25100BBDAAA /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAB91F772733E97300B8350E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DAFC5D9A2729494D0048815D /* MapVc.swift */,
+				DAFC5DA027295CD00048815D /* questionViewContorller.swift */,
+				DABAD88E273174A5006D6161 /* Convert.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAB91F782733E9D700B8350E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DAFC5DA4272961020048815D /* clapping.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		DAC358192727F25100BBDAAA = {
+			isa = PBXGroup;
+			children = (
+				DAC358242727F25100BBDAAA /* WorldTrotter-"Rasha Aiad"-iter1 */,
+				DAC358232727F25100BBDAAA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAC358232727F25100BBDAAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAC358222727F25100BBDAAA /* WorldTrotter-"Rasha Aiad"-iter1.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAC358242727F25100BBDAAA /* WorldTrotter-"Rasha Aiad"-iter1 */ = {
+			isa = PBXGroup;
+			children = (
+				DAB91F782733E9D700B8350E /* Sounds */,
+				DAB91F772733E97300B8350E /* Controller */,
+				DAB91F762733E92600B8350E /* View */,
+				DAB91F752733E8FB00B8350E /* Model */,
+				DAC358252727F25100BBDAAA /* AppDelegate.swift */,
+				DAC358272727F25100BBDAAA /* SceneDelegate.swift */,
+				DAFC5D9627292AD30048815D /* ViewController.swift */,
+				DAC3582E2727F25100BBDAAA /* Assets.xcassets */,
+				DAC358332727F25100BBDAAA /* Info.plist */,
+			);
+			path = "WorldTrotter-\"Rasha Aiad\"-iter1";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAC358212727F25100BBDAAA /* WorldTrotter-"Rasha Aiad"-iter1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC358362727F25100BBDAAA /* Build configuration list for PBXNativeTarget "WorldTrotter-"Rasha Aiad"-iter1" */;
+			buildPhases = (
+				DAC3581E2727F25100BBDAAA /* Sources */,
+				DAC3581F2727F25100BBDAAA /* Frameworks */,
+				DAC358202727F25100BBDAAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WorldTrotter-\"Rasha Aiad\"-iter1";
+			productName = "WorldTrotter-\"Rasha Aiad\"-iter1";
+			productReference = DAC358222727F25100BBDAAA /* WorldTrotter-"Rasha Aiad"-iter1.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAC3581A2727F25100BBDAAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					DAC358212727F25100BBDAAA = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = DAC3581D2727F25100BBDAAA /* Build configuration list for PBXProject "WorldTrotter-"Rasha Aiad"-iter1" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAC358192727F25100BBDAAA;
+			productRefGroup = DAC358232727F25100BBDAAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAC358212727F25100BBDAAA /* WorldTrotter-"Rasha Aiad"-iter1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAC358202727F25100BBDAAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAFC5DA5272961020048815D /* clapping.mp3 in Resources */,
+				DAC358322727F25100BBDAAA /* LaunchScreen.storyboard in Resources */,
+				DAC3582F2727F25100BBDAAA /* Assets.xcassets in Resources */,
+				DAC3582D2727F25100BBDAAA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAC3581E2727F25100BBDAAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAFC5D9B2729494D0048815D /* MapVc.swift in Sources */,
+				DABAD88F273174A5006D6161 /* Convert.swift in Sources */,
+				DAFC5D9F27294D110048815D /* QuestionManager.swift in Sources */,
+				DAC358262727F25100BBDAAA /* AppDelegate.swift in Sources */,
+				DAFC5D9D27294D0D0048815D /* Question.swift in Sources */,
+				DAFC5DA127295CD00048815D /* questionViewContorller.swift in Sources */,
+				DAC358282727F25100BBDAAA /* SceneDelegate.swift in Sources */,
+				DAFC5D9727292AD30048815D /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DAC3582B2727F25100BBDAAA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAC3582C2727F25100BBDAAA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAC358302727F25100BBDAAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAC358312727F25100BBDAAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAC358342727F25100BBDAAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DAC358352727F25100BBDAAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAC358372727F25100BBDAAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A9F2D7U526;
+				INFOPLIST_FILE = "WorldTrotter-\"Rasha Aiad\"-iter1/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "s.WorldTrotter--Rasha-Aiad--iter1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAC358382727F25100BBDAAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A9F2D7U526;
+				INFOPLIST_FILE = "WorldTrotter-\"Rasha Aiad\"-iter1/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "s.WorldTrotter--Rasha-Aiad--iter1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAC3581D2727F25100BBDAAA /* Build configuration list for PBXProject "WorldTrotter-"Rasha Aiad"-iter1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC358342727F25100BBDAAA /* Debug */,
+				DAC358352727F25100BBDAAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC358362727F25100BBDAAA /* Build configuration list for PBXNativeTarget "WorldTrotter-"Rasha Aiad"-iter1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC358372727F25100BBDAAA /* Debug */,
+				DAC358382727F25100BBDAAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAC3581A2727F25100BBDAAA /* Project object */;
+}
